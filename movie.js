@@ -18,7 +18,7 @@ function Movie(title, rating){
     }
     // toString method
     this.toString = function(){
-            return "<br /> Movies with rating " + this.title + " " + this.rating;
+        return "<br /> movie " + this.title + " has a rating of " + this.rating;
     }
 }
 
