@@ -1,43 +1,24 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Rate this Movies</title>
 <link href="style.css" type="text/css" rel="stylesheet" />
+        <!--Movies Title-->
+        <title>Movies</title>
 </head>
 <body>
-    <div id="main">
-        <section id="userheader">
-        <header>
-        Please rate your movies<br>
-        </header>
-        <br /><br />
-        <form>
-        <div>Title: <br /><input type="input" id="title" rows="1"></div>
-        <br />
-        <div>Rating (1-5):<br /> <input type ="number" id="rating" rows="1"></div>
-        <br />
-        <input type="button" id="AddMovies" value="Add Movies">
-        <input type="button" id="displayMovies" value="Show Movies">
-        </form>
-        </section>
-        <section id="userfooter"><br>
-        <footer>
-        Movies with rating <br>  
-        </footer>
-        <br /><br />
-        </section>
-        </div>
-        <script type="text/javascript" src="main.js"></script>
+
+        <p>Title: <input type="text" name="title" id='title'></p>
+        <p>Rating: <input type="text" name="rating" id='rating'></p>
+        <label for="myear">Year released:</label><br>
+        <input type="text" id="myear" name="myear" required><br><br>
+        <button onclick="add()">Add</button>
+        <button onclick="display()">Display</button>
+        <div id="display"></div>
+
+
         <script type="text/javascript" src="movie.js"></script>
-        </body>
-        </html>
-
-<footer class="Footer">
-    <div class="FooterContainer">
-        <p class="copyright">&copy; Copyrigtht 2022 by Yacquub Egal</p>
-    </div>
-</footer>
-
+        <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
+<br>
+© 2022 by Yacquub Egal

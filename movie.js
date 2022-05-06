@@ -1,35 +1,26 @@
-window.addEventListener("load", init);
-function init(){
-if(typeof(Storage)!=="undefined"){
-display();
-var button=document.getElementById("AddMovies");
-button.addEventListener("click",addInfo);
-var button=document.getElementById("displayMovies");
-button.addEventListener("click",display);
-}
-else{
-}
-}
-        
-function addInfo(){
-var movieName=document.getElementById("title").value;
-var movieRating=document.getElementById("rating").value;
-localStorage.setItem("movieName",movieName);
-localStorage.setItem("userRating", movieRating);
-display();
-}
- 
-function display(){
-    var rightBox=document.getElementById("userfooter");
-    var theMovie=localStorage.getItem("movieName");
-    var theRating = localStorage.getItem("userRating");
-    if (theRating==undefined){
-    rightBox.innerHTML = "";
+// constructor function Movie
+function Movie(title, rating){
+    // property title
+    this.title = title;
+    // property rating
+    this.rating = rating;
+    // validate method to validate title and rating
+    this.validate = function(){
+            // converting rating to number
+            var num_rat = parseInt(this.rating);
+            // if title is valid and num_rat between 1 and 5 return true
+            if(title && (num_rat>=1 && num_rat<=5)){
+                    return true;
+            }
+            else{ // otherwise false
+                    return false;
+            }
     }
-    else {
-        rightBox.innerHTML = "<br /> Movies with rating <footer <br />" + theMovie + " " + theRating;
-        }
-        }
+    // toString method
+    this.toString = function(){
+            return "<br /> Movies with rating " + this.title + " " + this.rating;
+    }
+}
 
 
-    
+
